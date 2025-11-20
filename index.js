@@ -10,21 +10,6 @@ const app=express()
 app.use(cors())
 app.use(express.json({limit:"5mb"}))
 
-/*app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "*"); 
-  res.header(
-    "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept"
-  );
-  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
-  
-  if (req.method === "OPTIONS") {
-    return res.status(200).end();
-  }
-
-  next();
-});*/
-
 
 //feltöltés végpont:
 app.post('/api/uploadImage', async (req,resp)=>{
@@ -62,4 +47,3 @@ app.post('/api/deleteImage',async (req,resp)=>{
 
 const port=process.env.PORT|| 5000
 app.listen(port,()=>console.log(`Server listening on port: ${port}`))
-//export default ServerlessHttp(app)
