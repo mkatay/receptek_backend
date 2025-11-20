@@ -62,4 +62,4 @@ app.post('/api/deleteImage',async (req,resp)=>{
 
 //const port=process.env.PORT|| 5000
 //app.listen(port,()=>console.log(`Server listening on port: ${port}`))
-export const handler=ServerlessHttp(app)
+export default ServerlessHttp(app)
